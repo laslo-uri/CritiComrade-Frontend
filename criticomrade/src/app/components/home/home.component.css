@@ -1,0 +1,190 @@
+main {
+  /*Positioning stuff*/
+  position: relative;
+  top: 5.4rem;
+}
+
+main .container {
+  /*Display stuff*/
+  display: grid;
+  grid-template-columns: 18vw auto 20vw;
+  /*Positioning stuff*/
+  position: relative;
+  /*Miscellaneous*/
+  column-gap: 2rem;
+}
+
+main .container .left {
+  /*Positioning stuff*/
+  position: sticky;
+  top: var(--sticky-top-left);
+  /*Box model stuff*/
+  height: max-content;
+}
+
+main .container .left .profile {
+  /*Display stuff*/
+  display: flex;
+  align-items: center;
+  /*Box model stuff*/
+  width: 100%;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  background: var(--color-default-nav);
+  /*Miscellaneous*/
+  column-gap: 1rem;
+}
+/* SIDE BAR */
+
+.left .sidebar {
+  /*Box model stuff*/
+  margin-top: 1rem;
+  border-radius: var(--card-border-radius);
+  background-color: var(--color-default-nav);
+}
+
+.left .sidebar .menu-item {
+  /*Display stuff*/
+  display: flex;
+  align-items: center;
+  /*Positioning stuff*/
+  position: relative;
+  /*Box model stuff*/
+  height: 4rem;
+  /*Manipulations stuff*/
+  transition: all 300ms ease;
+  /*Miscellaneous*/
+  cursor: pointer;
+}
+
+.left .sidebar .menu-item:hover {
+  /*Box model stuff*/
+  background-color: var(--color-default-hover);
+}
+
+.left .sidebar i {
+  /*Positioning stuff*/
+  position: relative;
+  /*Box model stuff*/
+  margin-left: 2rem;
+  /*Typography stuff*/
+  font-size: 1.4rem;
+  color: var(--color-gray);
+}
+
+.left .sidebar i .notification-count {
+  /*Positioning stuff*/
+  position: absolute;
+  right: -0.3rem;
+  top: -0.2rem;
+  /*Box model stuff*/
+  width: fit-content;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.8rem;
+  background-color: var(--color-default-red);
+  /*Typography stuff*/
+  font-size: 0.7rem;
+  color: var(--color-light);
+}
+
+.left .sidebar h3 {
+  /*Box model stuff*/
+  margin-left: 1.5rem;
+  /*Typography stuff*/
+  font-size: 1rem;
+}
+
+.left .sidebar .active {
+  /*Box model stuff*/
+  background-color: var(--color-default);
+}
+
+.left .sidebar .active i,
+.left .sidebar .active h3 {
+  /*Typography stuff*/
+  color: var(--color-default-red);
+}
+
+.left .sidebar .active::before {
+  /*Display stuff*/
+  content: "";
+  display: block;
+  /*Positioning stuff*/
+  position: absolute;
+  /*Box model stuff*/
+  width: 0.5rem;
+  height: 100%;
+  background: var(--color-default-red);
+}
+
+.left .sidebar .menu-item:first-child.active {
+  /*Box model stuff*/
+  border-top-left-radius: var(--card-border-radius);
+  /*Miscellaneous*/
+  overflow: hidden;
+}
+
+.left .sidebar .menu-item:last-child.active {
+  /*Box model stuff*/
+  border-bottom-left-radius: var(--card-border-radius);
+  /*Miscellaneous*/
+  overflow: hidden;
+}
+
+.left .btn {
+  /*Box model stuff*/
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem 0;
+  /*Typography stuff*/
+  text-align: center;
+}
+
+/**** notification popups ****/
+
+.left .notification-popup {
+  /*Display stuff*/
+  display: none;
+  /*Positioning stuff*/
+  position: absolute;
+  left: 110%;
+  top: 0;
+  z-index: 8;
+  /*Box model stuff*/
+  width: 30rem;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  background-color: var(--color-default-nav);
+  /*Miscellaneous*/
+  box-shadow: 0 0 2rem hsl(var(--color-default-nav), 75%, 60%, 25%);
+}
+
+.left .notification-popup::before {
+  /*Display stuff*/
+  content: "";
+  display: block;
+  /*Positioning stuff*/
+  position: absolute;
+  left: -0.6rem;
+  /*Box model stuff*/
+  width: 1.2rem;
+  height: 1.2rem;
+  background: red;
+  /*Manipulations stuff*/
+  transform: rotate(45deg);
+}
+
+.left .notification-popup > div {
+  /*Display stuff*/
+  display: flex;
+  align-items: flex-start;
+  /*Box model stuff*/
+  margin-bottom: 1rem;
+  /*Miscellaneous*/
+  gap: 1rem;
+}
+
+.left .notification-popup small {
+  /*Display stuff*/
+  display: block;
+}
