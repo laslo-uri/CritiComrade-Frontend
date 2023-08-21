@@ -1,4 +1,30 @@
-<div><h1>{{title}}</h1></div>
+<div class="main">
+  <nav>
+    <div class="container">
+      <h2 class="logo">CritiComrade</h2>
+      <div class="search-bar">
+        <img
+          height="20px"
+          padding="0"
+          src="../assets/svgs/search.svg"
+          alt="search.svg"
+        />
 
+        <input
+          height="20px"
+          type="search"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+      </div>
+      <div class="create">
+        <label class="btn btn-primary" for="create-post">Create</label>
+        <div class="profile-picture">
+          <img src="../assets/imgs/profile-picture-placeholder.jpg" />
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
 
 <router-outlet></router-outlet>
