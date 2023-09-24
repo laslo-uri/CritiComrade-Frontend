@@ -37,6 +37,34 @@
   /*Miscellaneous*/
   box-sizing: border-box;
   list-style: none;
+  
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  /*Box model stuff*/
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*Box model stuff*/
+  border-radius: 4px;
+  background-color: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /*Box model stuff*/
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  /*Box model stuff*/
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -46,7 +74,7 @@ body {
   font-family: Poppins, sans-serif;
   color: var(--color-light);
   /*Miscellaneous*/
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -130,7 +158,7 @@ nav .search-bar {
   /*Box model stuff*/
   padding: var(--search-padding);
   border-radius: var(--border-radius);
-  background-color: var(--color-light);
+  background-color: var(--color-default);
 }
 
 nav .search-bar input {
@@ -141,7 +169,11 @@ nav .search-bar input {
   background-color: transparent;
   /*Typography stuff*/
   font-size: 0.9rem;
-  color: var(--color-dark);
+  color: var(--color-light);
+}
+
+nav .search-bar i {
+  color: var(--color-gray);
 }
 
 nav .search-bar input[type="search"]::placeholder {
