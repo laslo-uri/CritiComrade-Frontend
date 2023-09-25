@@ -1,0 +1,23 @@
+.navbar {
+  /*Positioning stuff*/
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  /*Box model stuff*/
+  width: 100%;
+  padding: 0.7rem 0;
+  background-color: var(--color-default-nav);
+  display: block;
+}
+
+.navbar .container {
+  /*Display stuff*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar i {
+  /*Typography stuff*/
+  color: var(--color-dark);
+}

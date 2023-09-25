@@ -7,7 +7,7 @@ main {
 main .container {
   /*Display stuff*/
   display: grid;
-  grid-template-columns: 15vw 40vw 20vw; /* Adjust middle column width */
+  grid-template-columns: 15vw 55vw 0vw; /* Adjust middle column width */
   position: relative;
 
   column-gap: 2rem;

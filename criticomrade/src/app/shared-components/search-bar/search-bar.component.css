@@ -1,0 +1,31 @@
+.search-bar {
+  /*Display stuff*/
+  display: flex;
+  /*Box model stuff*/
+  padding: var(--search-padding);
+  border-radius: var(--border-radius);
+  background-color: var(--color-default);
+}
+
+.search-bar input {
+  /*Box model stuff*/
+  width: 30vw;
+  margin-left: 1rem;
+  border: none;
+  background-color: transparent;
+  /*Typography stuff*/
+  font-size: 0.9rem;
+  color: var(--color-light);
+}
+
+.search-bar i {
+  color: var(--color-gray);
+}
+
+.search-bar input[type="search"]::placeholder {
+  /*Display stuff*/
+  display: flex;
+  align-items: center;
+  /*Miscellaneous*/
+  gap: 2rem;
+}
